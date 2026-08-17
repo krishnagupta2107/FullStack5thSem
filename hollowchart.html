@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gradient Progress Ring</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ring {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #3a86ff 75%,
+                black 75%,
+                #0d2366 100%
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .ring::before {
+            content: "";
+            width: 160px;
+            height: 160px;
+            background: #000;
+            border-radius: 100%;
+            position: absolute;
+        }
+        .percentage {
+            position: relative;
+
+            color: white;
+
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="ring">
+        <div class="percentage">87%</div>
+    </div>
+
+</body>
+
+</html>
