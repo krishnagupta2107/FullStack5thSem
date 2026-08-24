@@ -5,29 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selectors</title>
     <style>
-        *{
+        *{  /* Universal Selector */
             margin:0;
             padding:0;
         }
-        #myid{
+        #myid{      /*ID Selector */
             color: red;
         }
-        .myclass{
+        .myclass{       /*Class Selector */
             color: blue;
-        }           
+        }
+        input[type="email"]{   /*Attribute Selector */
+            border:3px solid green;
+            border-radius:5px;
+        }
+        h1{        /*Element Name Selector */
+            color: purple;
+        }
+        ul>li.myclass>span{
+            background-color: black;
+            color:white;
+        }
+        div p {
+            color:aqua;
+        }
     </style>
 </head>
 <body>
+    <div>
+        <span>
+        <h3>This is Heading</h3>
+        <p>This is paragraph1.</p>
+        <p>This is paragraph2.</p>
+        </span>
+    </div>
     <h1>Selectors</h1>
     <ul>
-        <li class="myclass">Universal</li>
+        <li class="myclass">Universal   <span>123</span></li>
         <li id="myid">ID</li>
-        <li class="myclass">Class</li>
+        <li class="myclass">Class <span>123</span></li>
         <li>Attribute</li>
         <li>Element Name</li>
         <li>Combinators</li>
         <li>Pseudo-classes</li>
         <li>Pseudo-elements</li>
     </ul>
+    <input type="email" placeholder="Enter your email" required>
+    <br>
+    <input type="password" Placeholder="Enter your password" required>
 </body>
 </html>
