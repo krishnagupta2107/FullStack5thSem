@@ -35,8 +35,11 @@
             color: white;
         } */
     
-        div:has(h2){
+        .div :is(h2,h3){
             background-color: cyan;
+        }
+        div:has(h3,h2){
+            box-shadow:0 0 3px black;
         }
     </style>
 </head>
@@ -55,9 +58,13 @@
         <li>6</li>
         <li>7</li>
     </ul>
-    <div>
+    <div class="div">
         <p>lorem ipsum dolor sit amet</p>
         <h2>heading</h2>
+    </div>
+    <div class="div">
+        <p>lorem ipsum dolor sit amet</p>
+        <h3>heading</h2>
     </div>
 </body>
 </html>
