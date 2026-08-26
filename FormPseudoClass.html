@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Pseudo Class</title>
+    <style>
+        input{
+            border-width: 0px 0px 3px 0px;
+            border-color: black;
+            display: block;
+            margin-top: 3%;
+            font-size: 25px;
+        }
+        input:required{
+            border-color: red;
+        }
+        input:optional{
+            border-color: blue;
+        }
+        input:enabled{
+            background-color: aliceblue;
+            box-shadow: 0 0 3px black;
+        }
+        input:disabled{
+            background-color: lightgrey;
+            color: white;
+        }
+        input:valid{
+            background-color: lightgreen;
+            color:white;
+        }
+        input:invalid{
+            background-color: red;
+            color:white;
+        }
+        input:in-range{
+            background-color: aliceblue;
+            color:black;
+        }
+        input:out-of-range{
+            background-color: red;
+            color:black;
+        }
+        input:placeholder-shown{
+            outline: 3px solid blue;
+        }
+        input:read-only{
+            border-width:0px ;
+            box-shadow: 0 0 0 transparent;
+            background-color: grey;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="First Name" required>
+    <input type="text" placeholder="Middle Name">
+    <input type="text" placeholder="Last Name" required>
+    <input type="text" value="Address" disabled>
+    <input type="email" placeholder="Email">
+    <input type="number" min=10 max=100>
+    <button type="submit">Submit</button>
+    <input type="text" value="Mr." readonly>
+</body>
+</html>
