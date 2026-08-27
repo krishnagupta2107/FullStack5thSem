@@ -8,11 +8,12 @@
     <style>
         .container {
             display: flex;
-            flex-wrap: wrap;
-            flex-direction: row-reverse;
+            /* flex-wrap: wrap; */
+            flex-direction: row;
+            height: 100vh;
         }
 
-        #one {
+        /* #one {
             flex: 3;
             height: 100px;
             background-color: red;
@@ -31,6 +32,13 @@
             height: 100px;
             background-color: purple;
             min-width: 100px;
+        } */
+
+        #one,#two,#three{
+            flex:1;
+            height:100px;
+            margin: 3%;
+            box-shadow: 0 0 3px black;
         }
     </style>
 </head>
