@@ -12,6 +12,7 @@
             height: 97vh;
             align-items: center;          /*To make div center 3 card problem*/
             justify-content: center;            /*for making a single card in center by removing flex:1;*/
+            background-color: beige;
         }
         #box1{
             background-color: aliceblue;
@@ -20,7 +21,7 @@
             width: 300px;
             height: 200px;
             min-width: 200px;
-            box-shadow:3px 0 3px black;
+            box-shadow:3px 0 10px black;
             border-radius: 10px;
             border: 2px solid black;
         }
@@ -31,7 +32,16 @@
         h1{
             color:black;
             text-align: center;
-            text-shadow: 0 0 3px purple ;
+            text-shadow: 0 0 10px purple ;
+        }
+        button{
+            box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+            background-color: grey;
+            height: 25px;
+            width: 50px;
+        }
+        input{
+            box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
         }
         /* #box2{
             flex: 1;
@@ -48,13 +58,12 @@
         <div id="box1">
             <h1>Login</h1>
             <form action="">
-                
                 <label for="username">Username: </label>
-                <input type="text" id="username">
+                <input type="email" placeholder="Enter your email" id="username" required>
                 <br>
                 <br>
                 <label for="password">Password: </label>
-                <input type="password" id="password">
+                <input type="password" id="password" placeholder="Enter your password" required>
                 <br>
                 <br>
                 <button>Submit</button>
