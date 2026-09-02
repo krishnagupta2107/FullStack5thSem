@@ -8,7 +8,7 @@
         .container{
             flex-direction: row;
             outline: 3px solid black;
-            /* height: 90vh; */
+            /* height: 90vh;*/
             display: flex;
             /* justify-content: center;*/    /*main SPAce-between/space-around/space-evenly/flex-end/center        */
             /*align-items: center;*/        /*cross */
@@ -20,15 +20,18 @@
         }
         #box1{
             background-color: black;
-            flex-basis: 150px;
+            flex-basis: 100%;
+            flex-shrink: 2;
         }
         #box2{
             background-color: green;
-            flex-basis: 150px;
+            flex-basis: 100%;
+            flex-shrink: 10;
         }
         #box3{
             background-color: blue;
-            flex-basis:150px;
+            flex-basis:100%;
+            flex-shrink: 1;     /*Flex-grow/Flex-shrink        To write in single line: flex: flex-grow flex-shrink flex-basis */
         }
     </style>
 </head>
