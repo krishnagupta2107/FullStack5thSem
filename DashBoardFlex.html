@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            outline: 3px solid black;
+            height: 90vh;
+        }
+
+        .container>div {
+            color: white;
+        }
+
+        #sidebar {
+            background-color: black;
+            height: 100%;
+            flex-basis: 20%;
+            box-sizing: border-box;
+            padding-top: 10px;
+        }
+
+        #sidebar ul {
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #sidebar ul li {
+            list-style: none;
+            padding: 0 20px;
+            text-align: center;
+            font-weight: bold;
+            margin: 10%;
+        }
+
+        a {
+            text-decoration: none;
+            color: White;
+            transition: color 0.3s ease;
+            font-size: 20px;
+        }
+
+        a:hover {
+            color: blue;
+        }
+
+        /* Right-side content area */
+        #main {
+            flex-basis: 80%;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            min-height: 0;
+        }
+
+        /* top header area */
+        #box2 {
+            background-color: whitesmoke;
+            border-bottom: 1px solid black;
+            padding: 8px 12px;
+            color: black;
+        }
+
+        #box2 ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #box2 ul li {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* cards area below the header: responsive grid */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            padding: 16px;
+            align-items: stretch;
+            background: transparent;
+            overflow: auto;
+        }
+
+        .card {
+            background: red;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            padding: 12px;
+            height: 200px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="sidebar">
+            <ul>
+                <li style="color: white; font-size: 45px;">DashBoard</li>
+                <hr>
+                <br>
+                <li><a href="/DashBoardFlex.html">DashBoard</a></li>
+                <li><a href="/Users.html">Users</a></li>
+                <li><a href="/Product-Cards.html">Products</a></li>
+                <li><a href="/Orders.html">Order</a></li>
+                <li><a href="/Settings.html">Settings</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <div id="box2">
+                <ul>
+                    <li>DashBoard Layout</li>
+                </ul>
+            </div>
+
+            <div class="cards">
+                <div class="card">Box 1</div>
+                <div class="card">Box 2</div>
+                <div class="card">Box 3</div>
+                <div class="card">Box 4</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
