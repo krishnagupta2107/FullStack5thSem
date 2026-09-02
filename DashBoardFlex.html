@@ -103,6 +103,34 @@
             height: 200px;
             box-sizing: border-box;
         }
+
+        #recent-orders h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table thead {
+            background-color: #f0f0f0;
+        }
+
+        table th {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+            font-weight: bold;
+            color: #333;
+        }
+
+        table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            color: #333;
+        }
     </style>
 </head>
 
@@ -132,6 +160,45 @@
                 <div class="card">Box 2</div>
                 <div class="card">Box 3</div>
                 <div class="card">Box 4</div>
+            </div>
+            <div id="recent-orders">
+                <h3>Recent Orders</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Order Date</th>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ORD001</td>
+                            <td>2024-01-15</td>
+                            <td>John Smith</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>ORD002</td>
+                            <td>2024-01-14</td>
+                            <td>Jane Doe</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>ORD003</td>
+                            <td>2024-01-13</td>
+                            <td>Mike Johnson</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>ORD004</td>
+                            <td>2024-01-12</td>
+                            <td>Sarah Williams</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
