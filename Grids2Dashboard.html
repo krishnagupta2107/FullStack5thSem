@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DashBoard Grid</title>
-    <link rel="stylesheet" href="grid2.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+                "header header header"
+                "sidebar main main"
+                "sidebar card1 card2"
+                "footer footer footer";
+            gap: 10px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .box {
+            min-height: 120px;
+            border: 2px solid black;
+            box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+            background-color: peachpuff;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="box" style="grid-area: header;">Header</div>
@@ -16,4 +47,5 @@
         <div class="box" style="grid-area: footer;">Footer</div>
     </div>
 </body>
+
 </html>
