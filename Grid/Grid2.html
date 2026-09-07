@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo gallery design</title>
+    <style>
+        .container{
+            height: 90vh;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-areas: 
+            "photo1 photo2 photo3 photo4"
+            "photo5 photo6 photo7 photo8"
+            "photo9 photo10 photo11 photo12";
+            gap:5px;
+            margin: 20px;
+        }
+        .photo{
+            min-height: auto;
+            border: 2px solid black;
+            box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+            background-color: peachpuff;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="photo" style="grid-area: photo1;">1</div>
+        <div class="photo" style="grid-area: photo2;">2</div>
+        <div class="photo" style="grid-area: photo3;">3</div>
+        <div class="photo" style="grid-area: photo4;">4</div>
+        <div class="photo" style="grid-area: photo5;">5</div>
+        <div class="photo" style="grid-area: photo6;">6</div>
+        <div class="photo" style="grid-area: photo7;">7</div>
+        <div class="photo" style="grid-area: photo8;">8</div>
+        <div class="photo" style="grid-area: photo9;">9</div>
+        <div class="photo" style="grid-area: photo10;">10</div>
+        <div class="photo" style="grid-area: photo11;">11</div>
+        <div class="photo" style="grid-area: photo12;">12</div>
+    </div>
+</body>
+</html>
