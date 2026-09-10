@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        @layer special,base;
+        /* @layer try,base; */
+        @layer base{
+            body{
+                background-color: white;
+            }
+            p{
+                font-size: 30px;
+                color: blueviolet;
+            }
+            button{
+                font-size: 20px;
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                background-color: white;
+                border: 1px solid grey;
+                box-shadow: 3px 3px 5px grey;
+            }
+            button:active{
+                box-shadow: inset 3px 3px 5px grey;
+            }
+        }
+        @layer special{
+            body{
+                background-color: black;
+            }
+            p{
+            color:blue;
+            }
+            button{
+                border: 1px solid white;
+                box-shadow:inset 3px 3px 5px white;
+            }
+            button:active{
+                box-shadow:inset 3px 3px 3px grey;
+            }
+        }
+    </style>
+</head>     
+<body>
+    <p>Specificity : we create layers. Cascading layers ye teen pdhne h theory m
+        bem mythology
+    </p>
+    <button>Click Me!!!</button>
+</body>
+</html>
