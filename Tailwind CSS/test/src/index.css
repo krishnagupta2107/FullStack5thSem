@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+/* @config "../tailwind.config.js"; */
+
+
+@theme{
+    --color-coffee:red;
+}
+
+.heading{
+    @apply m-2 text-3xl font-bold underline text-center bg-blue-500 md:bg-amber-500 lg:bg-emerald-500;
+}
