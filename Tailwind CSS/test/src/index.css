@@ -2,11 +2,15 @@
 
 /* @config "../tailwind.config.js"; */
 
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme{
-    --color-coffee:red;
+    --color-coffee-roasted: #efc;
+    --color-coffee-normal: #abbaba;
+
+    --breakpoint-md: 30rem;
 }
 
 .heading{
-    @apply m-2 text-3xl font-bold underline text-center bg-blue-500 md:bg-amber-500 lg:bg-emerald-500;
+    @apply m-2 text-3xl font-bold underline text-center bg-blue-500 md:bg-coffee-roasted lg:bg-coffee-normal;
 }
