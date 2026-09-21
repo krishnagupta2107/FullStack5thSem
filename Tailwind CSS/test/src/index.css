@@ -2,8 +2,6 @@
 
 /* @config "../tailwind.config.js"; */
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme{
     --color-coffee-roasted: #efc;
     --color-coffee-normal: #abbaba;
