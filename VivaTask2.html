@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,26 +14,37 @@
             background: #f8fafc;
             color: #111827;
             font-family: Arial, sans-serif;
+            font-size: 14px;
         }
 
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 5%;
-            color: white;
-            background: #2563eb;
+            padding: 16px 5%;
+            background: #ffdd00;
+            border-bottom: 4px solid #ff6600;
         }
 
         header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 30px;
+            color: #1d4ed8;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
         nav a {
-            margin-left: 20px;
-            color: white;
+            color: #0f172a;
             text-decoration: none;
+            font-weight: bold;
+            background: #fff7cc;
+            padding: 6px 10px;
+            border: 2px solid #111827;
         }
 
         .container {
@@ -48,59 +58,57 @@
 
         .filters {
             height: fit-content;
-            padding: 20px;
-            background: white;
-            border: 1px solid #e5e7eb;
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
             border-radius: 8px;
+            padding: 18px;
+            box-shadow: 0 0 0 2px #f8f8f8;
         }
 
         .filters h2 {
-            margin-top: 0;
-            font-size: 18px;
+            margin: 0 0 16px;
+            font-size: 16px;
+            font-weight: 600;
         }
 
         .filters h3 {
-            margin: 20px 0 8px;
+            margin: 18px 0 8px;
             font-size: 14px;
+            font-weight: 600;
         }
 
-        label {
+        .filters label {
             display: block;
             margin: 10px 0;
             color: #6b7280;
-            font-size: 14px;
-        }
-
-        input {
-            accent-color: #2563eb;
-        }
-
-        button,
-        select {
-            padding: 9px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button {
-            color: white;
-            background: #2563eb;
-            border: 0;
-        }
-
-        button:hover {
-            background: #1d4ed8;
         }
 
         .filter-button {
             width: 100%;
-            margin-top: 12px;
+            margin-top: 14px;
+            padding: 9px;
+            border: 2px solid #111827;
+            border-radius: 5px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .filter-button:hover,
+        .cart-button:hover {
+            background: #1d4ed8;
+        }
+
+        .products-area {
+            min-width: 0;
         }
 
         .top-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 12px;
             margin-bottom: 20px;
         }
 
@@ -109,34 +117,44 @@
             font-size: 20px;
         }
 
-        select {
+        .top-row small {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .top-row select {
             border: 1px solid #e5e7eb;
+            padding: 9px;
+            border-radius: 5px;
+            background: white;
         }
 
         .products {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 24px;
         }
 
         .card {
             display: flex;
             flex-direction: column;
-            padding: 16px;
-            background: white;
+            background: #ffffff;
             border: 1px solid #e5e7eb;
             border-radius: 12px;
-            transition: box-shadow .2s;
+            padding: 16px;
+            transition: box-shadow 0.2s ease;
+            position: relative;
         }
 
         .card:hover {
-            box-shadow: 0 5px 15px #d1d5db;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
         }
 
         .image-box {
             position: relative;
             height: 220px;
             overflow: hidden;
+            border-radius: 8px;
             background: #f1f5f9;
         }
 
@@ -144,10 +162,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform .3s;
+            display: block;
+            transition: transform 0.3s ease;
         }
 
-        .card:hover img {
+        .card:hover .image-box img {
             transform: scale(1.08);
         }
 
@@ -156,10 +175,10 @@
             top: 8px;
             left: 8px;
             padding: 5px 8px;
-            color: white;
             border-radius: 4px;
             font-size: 11px;
             font-weight: bold;
+            color: white;
         }
 
         .sale {
@@ -179,11 +198,13 @@
         .card h3 {
             margin: 8px 0;
             font-size: 16px;
+            font-weight: 600;
         }
 
         .rating {
-            margin-bottom: 10px;
             color: #f59e0b;
+            font-size: 16px;
+            margin-bottom: 10px;
         }
 
         .rating span {
@@ -191,28 +212,39 @@
             font-size: 12px;
         }
 
-        .price {
+        .price-box {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
             margin-bottom: 16px;
+        }
+
+        .price {
             font-size: 20px;
             font-weight: bold;
         }
 
         .old-price {
-            margin-left: 6px;
             color: #9ca3af;
-            font-size: 14px;
-            font-weight: normal;
             text-decoration: line-through;
+            font-size: 14px;
         }
 
         .cart-button {
-            width: 100%;
             margin-top: auto;
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #111827;
+            border-radius: 5px;
+            background: #2563eb;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s ease;
         }
 
         @media (min-width: 1280px) {
             .products {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(4, minmax(0, 1fr));
             }
         }
 
@@ -226,7 +258,7 @@
             }
 
             .products {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
@@ -236,9 +268,9 @@
                 text-align: center;
             }
 
-            nav a {
-                display: inline-block;
-                margin: 12px 8px 0;
+            nav {
+                justify-content: center;
+                margin-top: 12px;
             }
 
             .container {
@@ -261,89 +293,126 @@
         }
     </style>
 </head>
-
 <body>
     <header>
         <h1>ShopKart</h1>
-        <nav><a href="#">Home</a><a href="#">Products</a><a href="#">Cart</a></nav>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Cart</a>
+        </nav>
     </header>
+
     <main class="container">
-        <div class="filters">
+        <aside class="filters">
             <h2>Filters</h2>
+
             <h3>Category</h3>
             <label><input type="checkbox"> Laptops</label>
             <label><input type="checkbox"> Accessories</label>
             <label><input type="checkbox"> Audio</label>
+
             <h3>Price Range</h3>
             <label><input type="checkbox"> Under $100</label>
             <label><input type="checkbox"> $100 - $500</label>
             <label><input type="checkbox"> Above $500</label>
+
             <button class="filter-button">Apply Filters</button>
-        </div>
-        <section>
+        </aside>
+
+        <section class="products-area">
             <div class="top-row">
-                <h2>Products <small>(6 results)</small></h2><select aria-label="Sort products">
+                <h2>Products <small>(6 results)</small></h2>
+                <select aria-label="Sort products">
                     <option>Sort by: Featured</option>
                     <option>Price: Low to High</option>
                     <option>Price: High to Low</option>
                 </select>
             </div>
+
             <div class="products">
                 <article class="card">
-                    <div class="image-box"><img
-                            src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=600&q=80"
-                            alt="Dell laptop"><span class="badge sale">SALE</span></div>
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=600&q=80" alt="Dell laptop">
+                        <span class="badge sale">SALE</span>
+                    </div>
                     <div class="category">Laptops</div>
                     <h3>Dell Inspiron 15</h3>
                     <div class="rating">★★★★★ <span>(124)</span></div>
-                    <div class="price">$899 <span class="old-price">$999</span></div><button class="cart-button">Add to
-                        Cart</button>
+                    <div class="price-box">
+                        <div class="price">$899</div>
+                        <div class="old-price">$999</div>
+                    </div>
+                    <button class="cart-button">Add to Cart</button>
                 </article>
+
                 <article class="card">
-                    <div class="image-box"><img
-                            src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80"
-                            alt="HP laptop"><span class="badge new">NEW</span></div>
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80" alt="HP laptop">
+                        <span class="badge new">NEW</span>
+                    </div>
                     <div class="category">Laptops</div>
                     <h3>HP Pavilion 14</h3>
                     <div class="rating">★★★★☆ <span>(82)</span></div>
-                    <div class="price">$1,299</div><button class="cart-button">Add to Cart</button>
+                    <div class="price-box">
+                        <div class="price">$1,299</div>
+                    </div>
+                    <button class="cart-button">Add to Cart</button>
                 </article>
+
                 <article class="card">
-                    <div class="image-box"><img
-                            src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&q=80"
-                            alt="Lenovo laptop"></div>
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&q=80" alt="Lenovo laptop">
+                    </div>
                     <div class="category">Laptops</div>
                     <h3>Lenovo IdeaPad 5</h3>
                     <div class="rating">★★★★★ <span>(96)</span></div>
-                    <div class="price">$1,099</div><button class="cart-button">Add to Cart</button>
+                    <div class="price-box">
+                        <div class="price">$1,099</div>
+                    </div>
+                    <button class="cart-button">Add to Cart</button>
                 </article>
+
                 <article class="card">
-                    <div class="image-box"><img
-                            src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=600&q=80"
-                            alt="MacBook Air"><span class="badge sale">SALE</span></div>
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=600&q=80" alt="MacBook Air case">
+                        <span class="badge sale">SALE</span>
+                    </div>
                     <div class="category">Accessories</div>
                     <h3>MacBook Air M2 Case</h3>
                     <div class="rating">★★★★★ <span>(210)</span></div>
-                    <div class="price">$129 <span class="old-price">$169</span></div><button class="cart-button">Add to
-                        Cart</button>
+                    <div class="price-box">
+                        <div class="price">$129</div>
+                        <div class="old-price">$169</div>
+                    </div>
+                    <button class="cart-button">Add to Cart</button>
                 </article>
+
                 <article class="card">
-                    <div class="image-box"><img
-                            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
-                            alt="Headphones"><span class="badge new">NEW</span></div>
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Wireless headphones">
+                        <span class="badge new">NEW</span>
+                    </div>
                     <div class="category">Audio</div>
                     <h3>Wireless Headphones</h3>
                     <div class="rating">★★★★☆ <span>(65)</span></div>
-                    <div class="price">$149</div><button class="cart-button">Add to Cart</button>
+                    <div class="price-box">
+                        <div class="price">$149</div>
+                    </div>
+                    <button class="cart-button">Add to Cart</button>
                 </article>
+
                 <article class="card">
-                    <div class="image-box"><img
-                            src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=600&q=80"
-                            alt="Wireless earbuds"></div>
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=600&q=80" alt="Wireless earbuds">
+                    </div>
                     <div class="category">Audio</div>
                     <h3>Wireless Earbuds</h3>
                     <div class="rating">★★★★☆ <span>(48)</span></div>
-                    <div class="price">$79</div><button class="cart-button">Add to Cart</button>
+                    <div class="price-box">
+                        <div class="price">$79</div>
+                    </div>
+                    <button class="cart-button">Add to Cart</button>
                 </article>
             </div>
         </section>
