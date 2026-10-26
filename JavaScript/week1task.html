@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Quiz Arena</title>
+</head>
+<body>
+    <main class="quiz-app" id="quiz-app">
+        <section id="quiz-screen">
+            <header class="quiz-header">
+                <h1>Js Quiz Arena</h1>
+                <span class="score" id="score">Score: 0</span>
+            </header>
+            <div class="progress-track" aria-label="Quiz progress">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="quiz-meta">
+                <span id="question-number">Question 1/25</span>
+                <span class="timer" id="timer" aria-live="polite">Time: 30s</span>
+            </div>
+            <section aria-labelledby="question-title">
+                <h2 id="question-title"></h2>
+                <div class="option-list" id="option-list"></div>
+                <div class="explanation" id="explanation" hidden></div>
+            </section>
+            <div class="quiz-actions">
+                <span></span>
+                <button class="primary" id="next-button" type="button" disabled>Next</button>
+            </div>
+        </section>
+
+        <section class="summary" id="summary-screen" hidden>
+            <h1>Quiz complete!</h1>
+            <h2 id="final-score"></h2>
+            <p id="rating"></p>
+            <div class="quiz-actions">
+                <button class="secondary" id="review-button" type="button"></button>
+                <button class="primary" id="restart-button" type="button">Restart quiz</button>
+            </div>
+            <div class="review" id="review" hidden></div>
+        </section>
+    </main>
+    <script src="week1task.js"></script>
+</body>
+</html>
