@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Match</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f1f5f9;
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 90px);
+            gap: 12px;
+            justify-content: center;
+            margin: 25px auto;
+        }
+        .card {
+            width: 90px;
+            height: 90px;
+            background: #2563eb;
+            color: white;
+            font-size: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .card.matched {
+            background: #22c55e;
+            cursor: default;
+        }
+        button {
+            padding: 10px 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧠 Memory Card Match</h1>
+    <h3>Moves: <span id="moves">0</span></h3>
+    <h3>Matched Pairs: <span id="pairs">0</span> / 8</h3>
+    <div class="grid" id="grid"></div>
+    <p id="message">Find all 8 matching pairs!</p>
+    <button id="restartBtn">Restart Game</button>
+    <script src="Task5.js"></script>
+</body>
+</html>
